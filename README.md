@@ -1,4 +1,4 @@
-# ReduxSimpleStarter
+# ReduxBlogApp
 
 ### Getting Started
 
