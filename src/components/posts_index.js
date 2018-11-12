@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchPosts} from '../actions';
 import _ from 'lodash';
+import {Link} from 'react-router-dom';
 
 class PostsIndex extends Component {
     componentDidMount() {
@@ -19,12 +20,17 @@ class PostsIndex extends Component {
     }
 
     render() {
-        return <div>
-            <h2>Posts</h2>
-            <ul>
-                {this.renderListOfPosts()}
-            </ul>
-        </div>;
+        return (
+            <div>
+                <div className="text-xs-right">
+                    <Link className="btn btn-primary" to="/posts/new">Add New Post</Link>
+                </div>
+                <h2>Posts</h2>
+                <ul>
+                    {this.renderListOfPosts()}
+                </ul>
+            </div>
+        );
     }
 }
 
